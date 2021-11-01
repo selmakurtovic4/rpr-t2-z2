@@ -1,5 +1,7 @@
 package ba.unsa.etf.rpr.tutorijal02;
 
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class IntervalTest {
@@ -54,7 +56,7 @@ class IntervalTest {
         assertEquals("[2.2,2.5)", i2.toString());
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void intersect1() {
         Interval i = new Interval(1.1, 2.5, true, false);
         Interval i2 = new Interval(2.2, 2.6, true, true);
@@ -62,21 +64,21 @@ class IntervalTest {
         assertEquals("[2.2,2.5)", i3.toString());
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void equals() {
         Interval i = new Interval(1.1, 2.5, true, false);
         Interval i2 = new Interval(1.1, 2.5, true, false);
         assertTrue(i.equals(i2));
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void equals2() {
         Interval i = new Interval(1.1, 2.5, true, false);
         Interval i2 = new Interval(1.1, 2.5, true, true);
         assertFalse(i.equals(i2));
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void intersect2() {
         Interval i = new Interval(1.1, 10.5, true, false);
         Interval i2 = new Interval(2.2, 2.6, true, true);
@@ -84,7 +86,7 @@ class IntervalTest {
         assertEquals("[2.2,2.6]", i3.toString());
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void intersect3() {
         Interval i = new Interval(-1.1, 2.5, true, false);
         Interval i2 = new Interval(2.2, 3.6, false, true);
